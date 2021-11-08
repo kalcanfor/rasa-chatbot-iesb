@@ -1,0 +1,75 @@
+version: "2.0"
+
+nlu: 
+  - synonym: Brasília
+    examples: |
+        - Brasília
+        - BSB
+        - Capital
+  - synonym: São Paulo
+    examples: |
+        - São Paulo
+        - SP
+        - Sampa
+  - synonym: Rio de Janeiro
+    examples: |
+        - Rio de Janeiro
+        - Rio
+        - RJ
+  - synonym: Belo Horizonte
+    examples: |
+        - Belo Horizonte
+        - Belzonte
+        - RJ
+  - intent: papofurado/cumprimento
+    examples: |
+        - Olá
+        - Oi
+        - Tudo bem?  
+        - Bom dia
+        - Boa tarde
+        - Boa noite  
+  - intent: papofurado/adeus
+    examples: |
+        - Tchau
+        - Adeus
+        - Até logo
+        - Um abraço
+        - Obrigado
+  - intent: papofurado/funcionalidades
+    examples: |
+        - Pra que você serve?
+        - O que você faz?
+        - Como você funciona?    
+  - intent: faq/marcar_consulta
+    examples: |
+        - Como faço para marcar uma consulta?
+        - O que preciso para marcar uma consulta?
+        - Quais informações são necessários para marcar uma consulta?
+        - Me ajude a marcar uma consulta  
+  - intent: faq/quantas_consultas
+    examples: |
+        - Quantas consultas posso agendar?
+        - Posso marcar mais de uma consulta?
+        - Existe um limite de consultas que eu possa marcar?
+  - intent: agendamento
+    examples: |
+        - Quero marcar uma consulta
+        - Quero agendar um horário
+        - Preciso de uma consulta urgente
+        - Posso marcar uma consulta?
+  - intent: informacao
+    examples: |
+        - cidade [Brasília](cidade)
+        - cidade de [São Paulo](cidade)
+        - cidade do [Rio de Janeiro](cidade)
+        - especialidade [clinica geral](especialidade)
+        - especialidade [cardiologia](especialidade)
+        - especialidade [pediatria](especialidade)
+        - especialidade [ortopedia](especialidade)
+  - intent: cancelar
+    examples: |
+        - quero cancelar
+        - desejo cancelar
+        - cancelar o formulário
+

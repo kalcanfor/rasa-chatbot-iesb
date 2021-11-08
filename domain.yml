@@ -1,0 +1,88 @@
+version: "2.0"
+
+intents:
+  - faq
+  - papofurado
+  - agendamento
+  - informacao
+  - cancelar
+
+entities:
+  - cidade
+  - time
+  - especialidade
+
+responses:
+  utter_papofurado/cumprimento:
+    - text: "Olá, como posso te ajudar?"
+    - text: "Oi, como posso te ajudar"
+    - text: "Sou seu assistente virtual, como posso te ajudar?"
+
+  utter_papofurado/adeus:
+    - text: "Até breve"
+
+  utter_papofurado/funcionalidades:
+    - text: "Sou seu assistente virtual para marcação de consultas em Brasilia, São Paulo, Rio de Janeiro ou Belo Horizonte, como posso te ajudar?"
+
+  utter_faq/marcar_consulta:
+    - text: "Para marcar uma consulta, basta você solicitar um agendamento aqui comigo. São necessárias as seguintes informações: Bairro, data e hora e a especialidade desejada."
+
+  utter_faq/quantas_consultas:
+    - text: "Aqui pelo chat será permitida marcação de somente um consulta, caso queira marcar outras consultas favor ligar no 08003210031."
+
+  utter_fallback:
+    - text: "Não compreendi bem, podemos falar sobre agendamento de consultas?"
+
+  utter_ask_cidade:
+    - text: "Qual a cidade?"
+
+  utter_ask_data:
+    - text: "Quando quer agendar?"
+
+  utter_ask_especialidade:
+    - text: "Qual a cidade?"
+
+  utter_envio_agendamento:
+    - text: "Ok, realizando agendamento"
+
+  utter_confirma_agendamento:
+    - text: "Agendamento efetuado na cidade de {resultado_cidade} no dia {resultado_data} para a especialidade {especialidade}"
+
+  utter_cancelamento:
+    - text: "Cancelando..."
+
+slots:
+  cidade:
+    type: text
+    influence_conversation: false
+  data:
+    type: text
+    influence_conversation: false
+  especialidade:
+    type: text
+    influence_conversation: false
+  resultado_cidade:
+    type: text
+    influence_conversation: false
+  resultado_data:
+    type: text
+    influence_conversation: false
+  resultado_especialidade:
+    type: text
+    influence_conversation: false
+
+forms:
+  agendamento_form:
+    cidade:
+      - type: from_entity
+        entity: cidade
+    data:
+      - type: from_entity
+        entity: time
+    especialidade:
+      - type: from_entity
+        entity: especialidade
+
+actions:
+  - action_clear_slots
+  - action_submit_agendamento
