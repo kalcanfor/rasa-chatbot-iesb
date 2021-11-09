@@ -2,7 +2,7 @@
 Exemplo básico de chatbot com Rasa
 
 ### Grupo de Trabalho:
-- Aristóteles Reis de Souza
+- Aristóteles Reis de Sousa
 - Kleber de Barros Alcanfor
 - Marcelo Amarante Ferreira Gomes (@mafgomes)
 - Toni Patrick Falcão
