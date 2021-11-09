@@ -48,17 +48,18 @@ class SubmitAgendamento(Action):
 	def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
 		#recebe dados dos slots
-		cidade = tracker.get_slot('cidade')
-		data = tracker.get_slot('data')
+		_cidade = tracker.get_slot('cidade')
+		print(_cidade)
+		_data = tracker.get_slot('data')
 
-		d = datetime.datetime.strptime(data, '%Y-%m-%dT%H:%M:%S.%f%z')
+		d = datetime.datetime.strptime(_data, '%Y-%m-%dT%H:%M:%S.%f%z')
 		convert_data = d.strftime('%d/%m/%Y às %H:%M')
 		#executa alguma coisa com os dados
 
 		#limpa slots do agendamento
 		return [
-			SlotSet('resultado_cidade', cidade), 
-			SlotSet('resultado_data', convert_data), 
+			SlotSet('resultado_cidade', _cidade), 
+			SlotSet('resultado_data', convert_data),
 			SlotSet('cidade', None),
 			SlotSet('data', None)
 			]

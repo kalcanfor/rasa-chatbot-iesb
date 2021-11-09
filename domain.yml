@@ -10,7 +10,6 @@ intents:
 entities:
   - cidade
   - time
-  - especialidade
 
 responses:
   utter_papofurado/cumprimento:
@@ -39,14 +38,11 @@ responses:
   utter_ask_data:
     - text: "Quando quer agendar?"
 
-  utter_ask_especialidade:
-    - text: "Qual a cidade?"
-
   utter_envio_agendamento:
     - text: "Ok, realizando agendamento"
 
   utter_confirma_agendamento:
-    - text: "Agendamento efetuado na cidade de {resultado_cidade} no dia {resultado_data} para a especialidade {especialidade}"
+    - text: "Agendamento efetuado na cidade de {resultado_cidade} no dia {resultado_data}"
 
   utter_cancelamento:
     - text: "Cancelando..."
@@ -58,16 +54,10 @@ slots:
   data:
     type: text
     influence_conversation: false
-  especialidade:
-    type: text
-    influence_conversation: false
   resultado_cidade:
     type: text
     influence_conversation: false
   resultado_data:
-    type: text
-    influence_conversation: false
-  resultado_especialidade:
     type: text
     influence_conversation: false
 
@@ -79,9 +69,6 @@ forms:
     data:
       - type: from_entity
         entity: time
-    especialidade:
-      - type: from_entity
-        entity: especialidade
 
 actions:
   - action_clear_slots

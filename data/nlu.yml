@@ -3,24 +3,24 @@ version: "2.0"
 nlu: 
   - synonym: Brasília
     examples: |
-        - Brasília
-        - BSB
-        - Capital
+      - brasilia
+      - Brasilia
+      - BSB
+      - bsb
+      - Capital
+      - capital
   - synonym: São Paulo
     examples: |
-        - São Paulo
-        - SP
-        - Sampa
+      - SP
+      - Sampa
   - synonym: Rio de Janeiro
     examples: |
-        - Rio de Janeiro
-        - Rio
-        - RJ
+      - Rio
+      - RJ
   - synonym: Belo Horizonte
     examples: |
-        - Belo Horizonte
-        - Belzonte
-        - RJ
+      - Belzonte
+      - RJ
   - intent: papofurado/cumprimento
     examples: |
         - Olá
@@ -63,10 +63,7 @@ nlu:
         - cidade [Brasília](cidade)
         - cidade de [São Paulo](cidade)
         - cidade do [Rio de Janeiro](cidade)
-        - especialidade [clinica geral](especialidade)
-        - especialidade [cardiologia](especialidade)
-        - especialidade [pediatria](especialidade)
-        - especialidade [ortopedia](especialidade)
+
   - intent: cancelar
     examples: |
         - quero cancelar
